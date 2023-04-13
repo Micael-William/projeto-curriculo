@@ -1,25 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
 body {
   background: #dfdfdf;
   font-family: 'Raleway', sans-serif;
   color: rgb(34, 34, 34);
-  margin: 0;
+  overflow-x: hidden;
+} 
+
+.conteudo {
+  width: 50vw;
+  display: flex;
 }
 
+.lista-habilidades{
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
 .container {
-  width: 900px;
-  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 90vh;
 }
 
 .profile {
-  text-align: center;
-  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 15px;
 }
 
 .foto-principal {
   width: 200px;
   border: 2px solid #FFFFFF; /* shorthand */
   border-radius: 50%;
-  margin: 30px 30px 0 30px;
   box-shadow: 0px 0px 10px #959595;
 }
 
@@ -43,7 +66,7 @@ h2 {
 
 p {
   line-height: 25px;
-  margin-top: 0;
+  /* margin-top: 0; */
 }
 
 .social-links {
@@ -64,9 +87,109 @@ p {
 }
 
 .footer {
-  margin-top: 50px;
+ 
   background-color: black;
   color: white;
   text-align: center;
-  padding: 20px;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+ 
+@media(max-width: 600px){
+  .container {
+    display: flex;
+    align-items: center;
+  }
+
+  .profile {
+    display: flex;
+    align-items: center;
+  }
+
+  .conteudo {
+    width: 100%;
+  }
+}
+
+@media (max-width: 481px){
+  .conteudo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .profile {
+    display: flex;
+  }
+
+
+  .lista-habilidades {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 381px) {
+  .container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  } 
+
+  h1, h2{
+    font-size: 1.2rem;
+    margin: 0 10px;
+  }
+
+  .foto-principal {
+    width: 150px;
+  }
+
+  .lista-habilidades {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  h3 {
+    text-align: center;
+    font-size: 1.2rem;
+  }
+
+  .descricao {
+    font-size: 15px;
+    text-align: center;
+  }
+  
+}
+
+@media (min-width: 482px) {
+  .conteudo {
+    display: flex;
+  }
+}
+
+/* 
+320px — 480px: dispositivos móveis
+481px — 768px: iPads, tablets
+769px — 1024px: telas pequenas, laptops
+1025px — 1200px: desktops, telas grandes
+1201px e acima —  telas muito grandes, TVs */
+
+/* max-width quando for menor */
+/* min-width quando for maior */
